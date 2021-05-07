@@ -1,0 +1,26 @@
+<div class="topnav">
+  <a class="active" routerLink='/user-details'>User List</a>
+  <a>User Profile</a>
+</div>
+
+<!-- User Profiles -->
+<div>
+  <table class="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let valus of getUserDetails['data']" (click)="userDetails(valus.id)">
+        <td><img src={{valus.avatar}} /></td>
+        <td>{{valus.first_name}}</td>
+        <td>{{valus.last_name}}</td>
+        <td>{{valus.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,27 @@
+<div class="topnav">
+    <a routerLink='/user-details'>User List</a>
+    <a class="active">User Profile</a>
+  </div>
+  
+  <!-- User Details -->
+  <div>
+      <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Avatar</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr > 
+          <td ><img src={{profileResponse?.avatar}} /></td>
+          <td>{{profileResponse?.first_name}}</td>
+          <td>{{profileResponse?.last_name}}</td>
+          <td>{{profileResponse?.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
